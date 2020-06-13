@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="buildings.xslt" ?>
+<buildings>
+    <building id= "1">
+    <name>Hagia Sophia</name>
+    <country>Turkey</country>
+    <city>Istanbul</city>
+  </building>
+    <building id = "2">
+    <name>The Eiffel tower</name>
+    <country>France</country>
+    <city>Paris</city>
+  </building>
+    <building id = "3">
+    <name>The Colosseum</name>
+    <country>Italy</country>
+    <city>Rome</city>
+  </building>
+    <building id = "4">
+    <name>Leaning tower of Pisa</name>
+    <country>Italy</country>
+    <city>Pisa</city>
+  </building>
+    <building id = "5">
+    <name>Taj Mahal</name>
+    <country>India</country>
+    <city>Agra</city>
+  </building>
+</buildings>
