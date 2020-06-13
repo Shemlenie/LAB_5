@@ -145,5 +145,21 @@ def apixml():
   strfile = ET.tostring(newhtml)
   return strfile
 
+@app.route("/food",methods=['GET','POST'])
+def food():
+    dom = ET.parse("./static/xml/food.xml")
+    type = request.args.get('type')
+    if type == 'list':
+        xslt = ET.parse("./static/xml/food_list.xslt")
+    elif type == 'table':
+        xslt = ET.parse("./static/xml/food.xslt")
+    else:
+        resp = Response(status=500)
+        return resp
+    transform = ET.XSLT(xslt)
+    newhtml = transform(dom)
+    strfile = ET.tostring(newhtml)
+    return strfile
+
 if __name__ == "__main__":
   app.run(host='127.0.0.1',port=5000)
