@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="food.xslt" ?>
+<food>
+    <dish id= "1">
+    <name>Борщ</name>
+    <cost>100 rub</cost>
+    <calorie>1000 cal</calorie>
+  </dish>
+    <dish id = "2">
+    <name>Пельмени</name>
+    <cost>150 rub</cost>
+    <calorie>100500 cal</calorie>
+  </dish>
+    <dish id = "3">
+    <name>Шаурма</name>
+    <cost>200 rub</cost>
+    <calorie>3242 cal</calorie>
+  </dish>
+    <dish id = "4">
+    <name>Гречка</name>
+    <cost>30 rub</cost>
+    <calorie>4564 cal</calorie>
+  </dish>
+</food>
