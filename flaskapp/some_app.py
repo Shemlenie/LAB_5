@@ -145,14 +145,14 @@ def apixml():
   strfile = ET.tostring(newhtml)
   return strfile
 
-@app.route("/food",methods=['GET','POST'])
-def food():
-    dom = ET.parse("./static/xml/food.xml")
+@app.route("/buildings",methods=['GET','POST'])
+def buildings():
+    dom = ET.parse("./static/xml/buildings.xml")
     type = request.args.get('type')
     if type == 'list':
-        xslt = ET.parse("./static/xml/food_list.xslt")
+        xslt = ET.parse("./static/xml/buildings_list.xslt")
     elif type == 'table':
-        xslt = ET.parse("./static/xml/food.xslt")
+        xslt = ET.parse("./static/xml/buildings.xslt")
     else:
         resp = Response(status=500)
         return resp
