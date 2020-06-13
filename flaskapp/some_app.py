@@ -1,6 +1,7 @@
 print("Hello world")
 from flask import Flask
 app = Flask(__name__)
+bootstrap = Bootstrap(app)
 
 #декоратор для вывода страницы по умолчанию
 @app.route("/")
