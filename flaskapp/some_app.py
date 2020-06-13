@@ -40,9 +40,6 @@ app.config['RECAPTCHA_PUBLIC_KEY'] = '6LdmOaQZAAAAAG0rJKkJ4EHir6rf_APYN1VUtt2K'
 app.config['RECAPTCHA_PRIVATE_KEY'] = '6LdmOaQZAAAAAHcMkoKw5T_f73waA9syTH3DktLJ'
 app.config['RECAPTCHA_OPTIONS'] = {'theme': 'white'}
 
-# обязательно добавить для работы со стандартными шаблонами
-bootstrap = Bootstrap(app)
-
 # создаем форму для загрузки файла
 class NetForm(FlaskForm):
   # поле для введения строки, валидируется наличием данных
