@@ -177,9 +177,9 @@ def picture_api():
         pic2 = request.form.get('pic2')
         pic1 = picture.stringToRGB(pic1)
         pic1 = Image.open('static/picha_1.jpeg')
-	pic2 = picture.stringToRGB(pic2)
-        pic2 = Image.open('static/picha_2.jpeg')
-        pic = picture.merge(pic1, pic2)
+	      pic2 = picture.stringToRGB(pic2)
+	      pic2 = Image.open('static/picha_2.jpeg')
+	      pic = picture.merge(pic1, pic2)
         pic.save('static/picha.jpeg')
     return render_template("picture.html", result=pic)
 
