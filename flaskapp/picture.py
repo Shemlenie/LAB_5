@@ -4,11 +4,11 @@ from PIL import Image, ImageEnhance
 import numpy as np
 
 def merge(img_1, img_2):
-    img = Image.new('RGB', (256, 256*3))
-    img1 = Image.open('1.jfif')
-    img2 = Image.open('2.jfif')
-    img.paste(img1, (0,0))
-    img.paste(img2, (0,256))
+    (width1, height1) = img_1.size
+    (width2, height2) = img_2.size
+    img = Image.new('RGB', (width1 + width2, height1 + height2))
+    img.paste(img_1, (0,0))
+    img.paste(img_2, (height1, 0))
     return img
 
 def stringToRGB(base64_string, num):
