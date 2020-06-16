@@ -161,5 +161,28 @@ def buildings():
     strfile = ET.tostring(newhtml)
     return strfile
 
+
+import picture
+
+@app.route("/picture_api",methods=['GET','POST'])
+def picture_api():
+    pic = False
+    if request.method == "POST":
+        try:
+            os.remove('static/picha_1.jpeg')
+            os.remove('static/picha.jpeg')
+        except FileNotFoundError:
+            pass
+        pic1 = request.form.get('pic1')
+        pic2 = request.form.get('pic2'))
+        pic1 = picture.stringToRGB(pic1)
+        pic1 = Image.open('static/picha_1.jpeg')
+		pic2 = picture.stringToRGB(pic2)
+        pic2 = Image.open('static/picha_2.jpeg')
+        pic = picture.merge(pic1, pic2)
+        pic.save('static/picha.jpeg')
+    return render_template("picture.html", result=pic)
+
+
 if __name__ == "__main__":
   app.run(host='127.0.0.1',port=5000)
