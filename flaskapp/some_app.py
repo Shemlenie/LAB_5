@@ -174,7 +174,7 @@ def picture_api():
         except FileNotFoundError:
             pass
         pic1 = request.form.get('pic1')
-        pic2 = request.form.get('pic2'))
+        pic2 = request.form.get('pic2')
         pic1 = picture.stringToRGB(pic1)
         pic1 = Image.open('static/picha_1.jpeg')
 		pic2 = picture.stringToRGB(pic2)
