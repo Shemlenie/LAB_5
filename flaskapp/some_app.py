@@ -183,6 +183,5 @@ def picture_api():
         pic.save('static/picha.jpeg')
     return render_template("picture.html", result=pic)
 
-
 if __name__ == "__main__":
   app.run(host='127.0.0.1',port=5000)
